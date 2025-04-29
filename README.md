@@ -116,6 +116,84 @@ Scrapes websites based on the provided URLs and optional CSS selectors.
 ]
 ```
 
+### Example Client
+
+An example client script is provided in `example_client.py`:
+
+```bash
+python example_client.py
+```
+
+### Sample Request and Response
+
+#### Sample Request
+
+```bash
+curl -X 'POST' \
+  'https://scrape.raisevcfund.com/scrape' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "urls": [
+    "https://softservedweb.com"
+  ]
+}'
+```
+
+#### Sample Response
+
+```json
+[
+  {
+    "url": "https://softservedweb.com/",
+    "status": "success",
+    "data": {
+      "title": "Soft Served Web",
+      "meta_description": "Soft Served Web is a web development agency that specializes in building custom websites and web applications.",
+      "h1_tags": [
+        "EmpoweringYourBusinesswithTechnologyExcellence",
+        "Services",
+        "Not Convinced?",
+        "For the needy !"
+      ],
+      "links": [
+        {"text": "", "href": "/"},
+        {"text": "About", "href": "/about"},
+        {"text": "Services", "href": "/#services"},
+        {"text": "Projects", "href": "/projects"},
+        {"text": "Blogs", "href": "/blogs"},
+        {"text": "IntroducingAgents as a Service", "href": "/projects"},
+        {"text": "Talk to Us", "href": "/contact"},
+        {"text": "projects", "href": "/projects"},
+        {"text": "AR Social\" Never expected an easy toi deploy treasurehunt application that too in AR would be out there, Believe me when I say ZERO setup time \"Raghav V SCollege Fest Coordinator, Cult", "href": "/projects/ar-social"},
+        {"text": "Kuppayam\" A game changer for my wardrobe , picking up my OOTD has never been easier. A must use for all fashionistas \"Ton GeorgeThrissur", "href": "/projects/kuppayam"},
+        {"text": "TinkerSpace VR\" Mindblowing, immersive and exactly as we expected, They delivered right in the nick of time \"MuadTinkerspace", "href": "/projects/tinker-space"},
+        {"text": "Connect with us!", "href": "/contact"},
+        {"text": "want to meet us ?", "href": "/about"},
+        {"text": "Book a Call", "href": "/contact"},
+        {"text": "", "href": "/projects/neura-query"},
+        {"text": "", "href": "/projects/dialgen-ai"},
+        {"text": "", "href": "/projects/daya-hr-automation"},
+        {"text": "Book a Call", "href": "/contact"},
+        {"text": "Projects", "href": "/projects"},
+        {"text": "Contact us", "href": "/contact"},
+        {"text": "Contact us", "href": "/contact"},
+        {"text": "Contact us", "href": "/contact"},
+        {"text": "Talk to Us", "href": "/contact"},
+        {"text": "", "href": "/contact"},
+        {"text": "Twitter", "href": "https://x.com/softservedweb"},
+        {"text": "Linkedin", "href": "https://www.linkedin.com/company/softservedweb/"},
+        {"text": "Instagram", "href": "https://www.instagram.com/softservedweb/"},
+        {"text": "Privacy Policy", "href": "/privacy-policy"},
+        {"text": "Terms and Conditions", "href": "/terms-and-condition"},
+        {"text": "Refund Policy", "href": "/refund-policy"}
+      ]
+    },
+    "error": null,
+    "time_taken": 0.3171391487121582
+  }
+]
+```
+
 ## Responsible Usage
 
 Please use this tool responsibly:
